@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+    <form method="post" id="task-form">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter Task" name="task" id="task" required>
+        <button type="submit">Save</button>
+    </form>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+    $(document).on('submit','#task-form',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'{% url "home" %}',
+            data:
+            {
+                task:$("#task").val(),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:function(){
+                  alert('Saved');
+                    }
+            })
+        });
+    </script>
+  
+</body>
+</html>

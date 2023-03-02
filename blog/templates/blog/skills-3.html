@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- need to add scroll down and put items -->
+
+<section >
+
+    <div  class="layout" style='text-align: center;
+                                    padding: 3em 0em 0em 0em;
+                                    flex-direction: column;
+                                    '>
+
+        <p class ='title-pages' style="
+                                    font-size: 1em;
+                                    letter-spacing: 0.05em;
+                                    font-weight: 600;
+                                    "> {{ title }} </p>
+        
+        <P class="longtext"><spin class="text">here</spin> is where I put <spin class="text">my</spin> best <spin class="text">arts</spin></P> 
+    
+    </div>
+
+</section>
+
+<section>
+
+</section>
+
+
+{% include 'blog/footer.html' %}
+{% endblock content %}

@@ -1,0 +1,102 @@
+/* default styling variables - making background color as white */
+html{
+    --bg: #fff;
+    --bg-panel: #ebebeb;
+    --color-heading: rgb(27, 168, 14); 
+    --color-text: #333333;
+}
+
+/* dark theme styling - Here, we set data-them as "dark"*/
+html[data-theme='dark'] {
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-heading: #0077ff; 
+    --color-text: #B5B5B5;
+}
+
+/* dark theme styling - Here, we set data-them as "dark"*/
+html[data-theme='dark'] {
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-heading: #0077ff; 
+    --color-text: #B5B5B5;
+}
+
+
+body { 
+    background-color: var(--bg); /* background color variable */
+}
+
+.container {
+  background-color: var(--bg-panel); /* background panel color variable */
+  margin: 5em;
+  padding: 5em;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "title switch"
+ "content content";
+}
+
+.container h1 {
+  margin: 0;
+  color: var(--color-heading); /* heading 1 background color variable */
+}
+
+.container p {
+  color: var(--color-text); /* text-color variable */
+  -ms-grid-column-span: 2;
+  grid-area: content;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  margin-top: 2em;
+}
+
+
+input[type=checkbox] { /* styling for input element */
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label { /* styling for labels */
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: #1ba80e;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after { /* styling for labels - on toggle */
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+input:checked + label { /* conditional check while toggling */
+    background: var(--color-heading);
+}
+
+input:checked + label:after {
+    left: calc(100% - 5px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}

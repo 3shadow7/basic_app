@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<section >
+
+    <div  class="layout" style='text-align: center;
+                                    padding: 3em 0em 0em 0em;
+                                    flex-direction: column;
+                                    '>
+
+        <p class ='title-pages' style="
+                                    font-size: 1em;
+                                    letter-spacing: 0.05em;
+                                    font-weight: 600;
+                                    "> {{ title }} </p>
+        
+        <p  class="longtext"><spin class="text">Bachelor's degree</spin> in Oil and Gas Engineering
+        Department of <spin class="text">Geophysics</spin></p>
+
+        <p  class="longtext">Certificate from <spin class="text">Sololearn</spin> for Completion of The <spin class="text">Python</spin> , <spin class="text">Html</spin> , <spin class="text">CSS</spin>  , <spin class="text">Javascript Languages</spin> </p>
+    
+    </div>
+
+</section>
+
+<section>
+
+</section>
+
+
+{% include 'blog/footer.html' %}
+{% endblock content %}

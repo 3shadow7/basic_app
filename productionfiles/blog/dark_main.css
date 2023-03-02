@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Play&family=Press+Start+2P&display=swap');
+
+
+:root {
+    color-scheme: light dark; /* both supported */
+  }
+  
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+    color: black;
+    transition-duration: 2s;
+  }
+
+  
+/*           DARK MODE PART          */
+
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition-duration: 2s;
+  }
+
+.dark-mode .logo,.dark-mode h2,.dark-mode .main-of-top-page h2 {
+    color: rgb(165, 22, 153);
+    transition-duration: 2s;
+  }
+
+.dark-mode .header{
+    background-color: rgba(0, 0, 0, 0.733);
+    transition-duration: 2s;
+  }
+.dark-mode .nav a{
+    color: rgb(233, 233, 233);
+text-shadow: 0px 8px 5px rgba(0, 255, 148, 0.25);
+transition-duration: 0.5s;
+  }
+
+.dark-mode .card {
+    background-color: #3d3d3d;
+    transition-duration: 0s ease;
+
+}
+
+.dark-mode .info h3{
+    color: rgb(165, 22, 153);
+    transition-duration: 0.2s;
+  }
+
+.dark-mode .main-of-top-page h3 ,.dark-mode .layout h3 ,.dark-mode .nav a:hover ,.dark-mode .info h3:hover {
+    color: rgb(58, 255, 101);
+    transition-duration: 0.2s;
+}
+
+.dark-mode .p , .dark-mode .div-contact a{
+    color: rgb(233, 233, 233);
+}
+
+/*        || STYLE WEB-PAGE ||       */
+/*              TOOLPAR             */
+.header{    
+
+    background-color: rgba(243, 243, 243, 0.849);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0ex 2ex ;
+    transition: top 0.3s; 
+}
+
+.logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Iceberg';
+    font-weight: 700;
+    font-size: 2.6em;
+    letter-spacing: 0.2em;
+    color: #3D0767;
+    text-shadow: 0 0 1px #000000;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 34px;
+
+    width: 435px;
+    height: 43px;
+
+
+}
+.nav a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+    text-shadow: 0px 8px 10px rgba(0, 255, 148, 0.25);
+    transition-duration: 0.2s;
+
+}
+.nav a:hover{
+    color: rgb(47, 204, 81);
+}
+
+
+.switch-border {
+    background: url(images/Group-sun.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px #ffd900;
+    transition-duration: 2s ;
+}
+
+
+
+#demo:checked + label {
+    background: url(images/Group-moon.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 15px rgb(0, 255, 234);
+    transform: rotate(720deg);
+    transition-duration: 2s ;
+}
+
+#demo {
+    width: 0%;
+    height: 0%;
+}
+
+/*          FIRST PART          */
+.space{
+    min-height: 4vh;
+}
+.main-of-top-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  space-between;
+    }
+.imgs {
+    text-align: center;
+    max-width:50% ;
+    display: flex;
+    flex-direction: column;  
+    max-height: fit-content;
+}
+.h {
+    text-align: center;
+    max-width:50% ;
+    display: flex;
+    align-items: center;
+    max-height: fit-content;
+
+}
+.main-of-top-page img{
+    justify-content: flex-start ;
+}
+.small-photo{
+    padding: 0% 25% 0% 58%;
+    transform: rotate(4deg);
+}
+.main-of-top-page h2{
+    color: #3D0767;
+    text-shadow: 0px 8px 10px rgba(0, 255, 148, 0.25);
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    padding: 0em 0em 0em 0em;
+}
+/*
+rgb(58, 255, 101) l-green
+*/
+.main-of-top-page h3 , .layout h3{
+    color: rgb(47, 204, 81);
+    font-family:  Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1.3em;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    word-spacing: 0.1em;
+    text-align: center;
+    padding: 0em 0em 2em 0em;
+    margin: 1em;
+}
+
+
+
+/*          SECOND PART            */
+.skills {
+    min-height: 100vh;
+    width: 100%;
+
+}
+.title0 {
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'Iceberg';
+    justify-content: center;
+    color: #3D0767;
+    font-size: 4.5em;
+    font-weight: 900;
+    margin-bottom: 40px;
+    padding-top: 45px;
+
+}
+
+.fathear_of_cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    background-color: #e0e0e0;
+    width: 17em;
+    box-shadow:  0px 0px 23px rgba(0, 255, 148, 0.333);
+    padding: 1.6em;
+    border-radius: 1em;
+    margin: 0.9em;
+    transition: 0.4s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.icon {
+    
+    font-size: 0em;
+    display: flex;
+    justify-content: center;
+    padding: 0.25em;
+}
+.icon img {
+    width: 100%;
+    height: auto;
+}
+
+
+.info {
+    text-align: center;
+}
+
+
+.info h3{
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: #3D0767;
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+    transition: 0.2s;
+}
+
+.info h3:hover{
+    color: rgb(47, 204, 81);
+}
+
+.p {
+    color: black;
+    font-weight: 500;
+
+}
+
+
+
+/*          THERD PART            */
+.projects {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.title1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Iceberg';
+    font-size: 4.5em;
+    font-weight: 900;
+    color: #3D0767;
+    margin-bottom: 40px;
+    padding-top: 45px;
+}
+
+
+
+/*          FOURD PART            */
+
+.contact {
+    min-height: 100vh;
+    width: 100%;
+    background: url(images/bg-contact.svg) no-repeat;
+    background-position: top;
+}
+.title2 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Iceberg';
+    font-size: 4.5em;
+    font-weight: 900;
+    color: #3D0767;
+    margin-bottom: 40px;
+    padding-top: 45px;
+}
+.layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.div-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-contact a{
+    display: flex;
+    margin:2ex ;
+    color: #000;
+    text-shadow: 0px 8px 10px rgba(255, 0, 255, 0.33);
+    transition-duration: 0.2s;
+}
+
+.div-contact span{
+    font-family:' sans-serif';
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+.div-contact i{
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    margin-right:   12px ;
+}
+
+/*  this is for error page  */
+
+.error {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:  center;
+    }
+
+.title {
+    color: #3D0767;
+    text-shadow: 0px 8px 10px rgba(0, 255, 148, 0.25);
+    font-size: 3.5em;
+    letter-spacing: 0.1em;
+    padding: 0em 0em 0em 0em;
+    text-align: center;
+}
+
+.image {
+    width: 40%;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 1023px ) {
+    body {
+        margin: 60px 0px 0px 0px;
+    }
+    .header{    
+        padding: 1ex 1ex 0ex 1ex;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+
+    .nav {
+        gap: 8px;
+        width: 100%;
+        height: auto;
+        justify-content: right;
+        align-items: center;
+        }
+
+    .nav a{
+        font-weight: 500;
+        font-size: 0.75em;
+        letter-spacing: 0em;
+    }
+
+    .switch-border {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 3.2em;
+        right: 1.3em;
+    }
+
+
+
+    #demo:checked + label {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 2.7em;
+        right: 1em;
+    }
+
+/*          FIRST PART          */
+.space{
+    min-height: 4vh;
+}
+        
+    .main-of-top-page {
+        min-height:60vmax;
+        width: 100%;
+        }
+        
+    .imgs {
+        text-align: center;
+        max-width:66% ;
+    }
+        
+    .h {
+        text-align: center;
+        max-width:100% ;
+        display: flex;
+        align-items: center;
+        max-height: fit-content;
+
+    }
+
+.main-of-top-page img{
+    justify-content: flex-start ;
+    }
+
+    .main-of-top-page h2{
+        font-size: 1.1em;
+        letter-spacing: 0.1em;
+        padding: 1em 0em 0em 0em;
+
+    }
+
+    .main-of-top-page h3 , .layout h3 {
+        font-size: 0.7em;
+        letter-spacing: 0.2em;
+        font-weight: 800;
+        word-spacing: 0.1em;
+        text-align: center;
+        padding: 0em 0em 8em 0em;
+        margin: 1em;
+    }
+
+    .layout h3{
+        padding: 0em 0em 0em 0em;
+    }
+
+
+/*          SECOND PART            */
+.skills {
+    min-height: 90vh;
+    width: 100%;
+
+    }
+    .title0 {
+        display: flex;
+        text-transform: uppercase;
+        font-family: 'Iceberg';
+        justify-content: center;
+        color: #3D0767;
+        font-size: 3.5em;
+        font-weight: 900;
+        margin-bottom: 30px;
+        padding-top: 45px;
+    }
+
+.fathear_of_cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    background-color: #e0e0e0;
+    width: 10em;
+    box-shadow: 0px 0px 23px rgba(0, 255, 148, 0.25);
+    padding: 0.3em;
+    border-radius: 1em;
+    margin: 0.6em;
+    transition: 0.4s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.icon {
+    
+    font-size: 0em;
+    display: flex;
+    justify-content: center;
+    padding: 0.25em;
+    }
+
+    .icon img {
+        width: 80%;
+        height: auto;
+    }
+
+
+.info {
+    text-align: center;
+}
+
+
+    .info h3{
+        letter-spacing: 0.15em;
+        text-align: center;
+        color: #3D0767;
+        font-size: 1.1em;
+        padding-bottom: 0.1em;
+        transition: 0.2s;
+    }
+
+.info h3:hover{
+    color: rgb(58, 255, 101);
+}
+
+.p {
+    color: black;
+    font-weight: 500;
+    font-size: 0.7em;
+}
+
+
+
+/*          THERD PART            */
+.projects {
+    min-height: 73vh;
+    width: 100%;
+}
+
+.title1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Iceberg';
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #3D0767;
+    margin-bottom: 30px;
+    padding-top: 45px;
+}
+
+
+
+/*          FOURD PART            */
+
+.contact {
+    min-height: fit-content ;
+    width: 100%;
+    background: url(images/bg-contact.svg) no-repeat;
+    background-position-y: 110%;
+    background-position-x: 50%;
+    background-size: 110%;
+    }
+    .title2 {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: 'Iceberg';
+        font-size: 3.5em;
+        font-weight: 900;
+        color: #3D0767;
+        margin-bottom: 10px;
+        padding-top: 45px;
+    }
+    
+.layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+    .div-contact{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4em;
+
+    }
+.div-contact a{
+    display: flex;
+    margin:1.3ex ;
+    color: #000;
+    text-shadow: 0px 8px 10px rgba(255, 0, 255, 0.33);
+    transition-duration: 0.2s;
+}
+
+.div-contact span{
+    font-family:' sans-serif';
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+.div-contact i{
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+    margin-right:   12px ;
+}
+}

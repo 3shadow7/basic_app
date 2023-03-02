@@ -1,0 +1,114 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<section class="main-of-top-page">
+    <div class="HalfScreen-img">
+        <img src="{% static 'blog/images/main-photo.svg'%}" alt="my face">
+        <img class="small-photo" src="{% static 'blog/images/small pick photo.svg'%}" alt="small photo">
+    </div>
+    <div class="HalfScreen-h">
+        <div>
+            <h2 class="title-pages">an amateur</h2>
+
+            <h3 class="bio">My curiosity and my frequent question is the secret of my success and progress</h3>
+            <!--  #mybe u need something to learn from this
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/the_crazy_shadow/"><i class="fa-brands fa-instagram-square"></i></a>
+                            <a href="https://www.t.me/the_crazy_shadow/"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    -->
+        </div>
+    </div>
+
+</section>
+
+<section class="skills" id="skills">
+    <h2 class="titles">Skills</h2>
+    <div class="layout" style="flex-direction: row;">
+        <!-- ^-^ -->
+
+        <a href="{% url 'skills-1' %}">
+            <div class="card">
+                <div class="icon">
+                    <img src="{% static 'blog/images/college.svg'%}" alt="college">
+                </div>
+                <div class="info">
+                    <h3 class="small-titles">Specialty</h3>
+                    
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="{% url 'skills-2' %}">
+            <div class="card">
+                <div class="icon">
+                    <img src="{% static 'blog/images/services.svg'%}" alt="services">
+                </div>
+                <div class="info">
+                    <h3 class="small-titles">Services</h3>
+                    
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="{% url 'skills-3' %}">
+            <div class="card" id="card">
+                <div class="icon">
+                    <img src="{% static 'blog/images/talent.svg'%}" alt="talents">
+                </div>
+                <div class="info">
+                    <h3 class="small-titles">Talents</h3>
+                    
+                </div>
+            </div>
+        </a>
+        <!-- any card againe you need it , put it here -->
+
+
+    </div>
+
+
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="titles">Projects</h2>
+    <div class="layout" style="flex-direction: row;">
+
+        <a href="https://github.com/3shadow7/">
+            <div class="card">
+                <div class="icon">
+                    <img src="{% static 'blog/images/developer.svg'%}" alt="developer">
+                </div>
+                <div class="info">
+                    <h3 class="small-titles">Developer</h3>
+                    <p class="p">
+                        Click to see my work on githup
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/the_crazy_shadow/">
+            <div class="card">
+                <div class="icon">
+                    <img src="{% static 'blog/images/Design-book.svg'%}" alt="Design-book">
+                </div>
+                <div class="info">
+                    <h3 class="small-titles">Writer</h3>
+                    <p class="p">
+                        Click to see my work on instagram
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <!-- here we can add new card -->
+    </div>
+
+</section>
+{% include 'blog/footer.html' %}
+{% endblock content %}
+
